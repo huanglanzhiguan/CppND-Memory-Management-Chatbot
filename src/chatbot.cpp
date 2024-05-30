@@ -70,6 +70,9 @@ ChatBot::ChatBot(ChatBot &&source) {
     _currentNode = source._currentNode;
     _image = source._image;
     source._image = NULL;
+    source._chatLogic = nullptr;
+    source._rootNode = nullptr;
+    source._currentNode = nullptr;
 }
 
 ChatBot &ChatBot::operator=(ChatBot &&source) {
@@ -80,6 +83,9 @@ ChatBot &ChatBot::operator=(ChatBot &&source) {
     _currentNode = source._currentNode;
     _image = source._image;
     source._image = NULL;
+    source._chatLogic = nullptr;
+    source._rootNode = nullptr;
+    source._currentNode = nullptr;
 
     return *this;
 }
